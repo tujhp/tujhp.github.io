@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div style="display: none;" id="function-list">
+      <h2>Функции:</h2>
+      <ul>
+          <li><a href="#" onclick="openbox('changeTableBorder'); return false">Изменить границы таблицы</a></li>
+          <li><a href="#" onclick="openbox('add-caption'); return false">Изменить заголовок таблицы</a></li>
+          <li><a href="#" onclick="openbox('delete-string'); return false">Удалить строку</a></li>
+          <li><a href="#" onclick="openbox('random-choice'); return false">Случайный выбор</a></li>
+          <li><a href="#" onclick="openbox('delete-table'); return false">Удалить</a></li>
+      </ul>
+    </div>
+    <script src="script.js">
+    </script>
+    <form id="create-table">
+        Введите количество колонок таблицы:
+        <br>
+        <input type="text" id="columns">
+        <br> Введите количество строк таблицы:
+        <br>
+        <input type="text" id="rows">
+        <br>
+        <input value="Создать таблицу" onclick="tableCreate()" type="button" id="create">
+    </form>
+    <div id="function">
+        <div id="changeTableBorder" style="display: none;">
+            <br> Ширина таблицы
+            <input maxlength="3" type="number" id="width" onchange="changeButtonValue()" placeholder="1"> Выберите рамку для таблицы
+            <select id="option-border" onchange="changeButtonValue()">
+                <option>Dotted</option>
+                <option>Dashed</option>
+                <option>Solid</option>
+                <option>Double</option>
+                <option>Groove</option>
+                <option>Ridge</option>
+                <option>Iset</option>
+                <option>Outset</option>
+            </select>
+            <input value="Применить 1px dotted" type="button" onclick="changeTableBorder()" id="apply">
+        </div>
+        <br>
+        <div id="add-caption" style="display: none;">
+            Введите заголовок таблицы
+            <input id="caption">
+            <input value="Добавить" type="submit" onclick="addCaptionTable()">
+        </div>
+        <br>
+        <div id="delete-string" style="display: none;">
+            Введите номер строки
+            <input id="row-num">
+            <input type="submit" onclick="deleteString()" value="Удалить">
+        </div>
+        <br>
+        <div id="random-choice" style="display: none;">
+        <input type="submit" value="Magic" onclick="magic()">
+        </div>
+        <div id="delete-table" style="display: none;">
+        <input type="submit" value="Удалить таблицу" onclick="deleteTable()">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+ul {
+    list-style: none;
+    margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+    padding-left: 0; /*убираем левый отступ, равный 40px*/
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+li {
+    display: inline;
+    margin:20px;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
