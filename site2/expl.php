@@ -1,5 +1,5 @@
-<?php
+<html><head></head><body><?php
 
 header("Location: file:///etc/passwd");
 
-?>
+?></body></html>
